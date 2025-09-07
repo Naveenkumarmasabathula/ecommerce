@@ -8,7 +8,7 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [token, setToken] = useState(localStorage.getItem('token') || null);
 
-  axios.defaults.baseURL = 'http://localhost:5000/api';
+  axios.defaults.baseURL = 'https://ecommerce-backend-xyz.onrender.com/api';
   axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
 
   useEffect(() => {
